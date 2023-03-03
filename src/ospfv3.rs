@@ -209,7 +209,7 @@ impl display Ospfv3LinkStateType {
 /// examining the LS age, LS sequence number, and LS checksum fields that
 /// are also contained in the LSA header.
 #[repr(C)]
-#[derive(Debug, NomBE)]
+#[derive(Debug, NomBE, Clone, Copy)]
 pub struct Ospfv3LinkStateAdvertisementHeader {
     pub ls_age: u16,
     pub link_state_type: Ospfv3LinkStateType,
