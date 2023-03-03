@@ -208,6 +208,7 @@ impl display Ospfv3LinkStateType {
 /// determine which instance is more recent.  This is accomplished by
 /// examining the LS age, LS sequence number, and LS checksum fields that
 /// are also contained in the LSA header.
+#[repr(C)]
 #[derive(Debug, NomBE)]
 pub struct Ospfv3LinkStateAdvertisementHeader {
     pub ls_age: u16,
